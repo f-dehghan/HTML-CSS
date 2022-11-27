@@ -1,0 +1,73 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    background-color: red;
+    height: 90vh;
+}
+
+.header{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: 90vh;
+}
+
+.left{
+    background-color: green;
+    grid-column: 1/4;
+    background-image: url(pics/pic1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.right{
+    display: grid;/*do not forget it when using grid lines*/
+    background-color: #222121;
+    grid-column: 4/7;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(5,1fr);
+}
+
+.text{
+    position: absolute;
+    text-align: center;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    top: 40%;
+    right: 38%;
+    background: linear-gradient(to right, black 45%, gray 30%);
+    -webkit-background-clip: text;/*revert color and background*/
+    -webkit-text-fill-color: transparent;
+}
+
+.wellcome{
+    grid-column: 3/4;
+    grid-row: 2/3;
+    font-family: 'Nerko One', cursive;
+    color: white;
+}
+
+.paraph{
+    grid-column: 3/5;
+    grid-row: 3/4;
+    font-family: 'Nerko One', cursive;/*google fonts*/
+    color: whitesmoke;
+}
+.btn{
+    grid-column: 3/4;
+    grid-row: 4/5;
+    align-self: center; /*position according to its box*/
+    font-family: 'Nerko One', cursive;
+    padding: 9px;
+    color: white;
+    background-color: rgb(92, 92, 245);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+.btn:hover{
+    background-color: white;
+    color: rgb(92, 92, 245);
+}
